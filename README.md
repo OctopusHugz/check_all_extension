@@ -1,13 +1,13 @@
-# Steps to use the Check All Tasks Button:
+# Check All Tasks Button:
 
-## Setup Environment
+## How to Use - Setup Environment
 1. [Download Chrome](https://www.google.com/chrome/thank-you.html?statcb=0&installdataindex=empty&defaultbrowser=0#)
 
 2. [Download Requestly extension](https://chrome.google.com/webstore/detail/requestly-redirect-url-mo/mdnleldcmiljblolnjhpnblkcekpdkpa?hl=en)
 
 ---
 
-## Adding The Script
+## How to Use - Adding The Script
 3. Copy `checkAllTasks.js` contents from this repo
 
 4. Open Requestly extension in Chrome
@@ -28,5 +28,5 @@
 	- Use the `Pick from Library` button on the right side of the `Source` field
 	- Select the file you just added in step 5!
 
-## Enjoying the CATB!
+## Enjoy the CATB!
 - If you find any bugs, please report them so they can be squashed! Otherwise, happy checking!
