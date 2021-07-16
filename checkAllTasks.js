@@ -43,9 +43,7 @@ $(() => {
           $(selectorString).click();
         }
         const taskCheckString = `<div><p class="grid-main" style="display: flex; justify-content: center; align-items: center;">${taskNumber.toString()}</p></div>`;
-        // setTimeout(() => {
-        //   $('button.close').click();
-        // }, 100);
+        $('button.close').click();
         $('.check-all-tasks').append(taskCheckString);
         taskNumber += 1;
       });
