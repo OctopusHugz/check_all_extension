@@ -4,7 +4,7 @@ $(() => {
 
   function checkAndCreate() {
     const checkAllButton = '<div><button class="check-all-btn" style="margin: 2rem 0 0; border-radius: 0.5rem; position: fixed; bottom: 40px; right: 100px; height: 50px; background-color: #48d1cc;">Check All Tasks</button></div>';
-    const checkAllTasksResults = '<div class="check-all-tasks" style="padding: 2rem; margin-bottom: 2rem; border-radius: 0.5rem; position: fixed; bottom: 100px; right: 40px; height: 50vh; text-align: center;"></div>';
+    const checkAllTasksResults = '<div class="check-all-tasks" style="padding: 1rem; border-radius: 0.5rem; position: fixed; bottom: 100px; right: 40px; height: 40vh; text-align: center;"></div>';
     const checkerAvailable = $(".list-group-item:contains('was')").html();
     const secondChance = $(".list-group-item:contains('second')").html();
     const projectFinished = $(".list-group-item:contains('over')").html();
@@ -19,12 +19,11 @@ $(() => {
     $('.check-all-tasks').css({
       'background-color': 'rgb(30, 33, 34)',
       color: 'white',
-      width: '10%',
+      width: '175px',
       display: 'grid',
-      'grid-template-columns': '5rem',
+      'grid-template-columns': '100%',
       'grid-template-rows': 'auto',
       'grid-template-areas': '"main"',
-      gap: '2rem',
       'justify-content': 'center',
       'overflow-y': 'auto',
     });
@@ -44,15 +43,16 @@ $(() => {
           $(selectorString).click();
         }
         const taskCheckString = `<div><p class="grid-main" style="display: flex; justify-content: center; align-items: center;">${taskNumber.toString()}</p></div>`;
-        setTimeout(() => {
-          $('button.close').click();
-        }, 100);
+        // setTimeout(() => {
+        //   $('button.close').click();
+        // }, 100);
         $('.check-all-tasks').append(taskCheckString);
         taskNumber += 1;
       });
     });
   }
 
+  // recursively waits until elements in a given selector are populated
   function waitForAllEls(selector, callback) {
     if (document.querySelectorAll(selector).length > 0) callback();
     else {
@@ -62,6 +62,7 @@ $(() => {
     }
   };
 
+  // checks all tasks at once
   function checkAllTasks() {
     let index = 0;
     const failedChecks = [];
