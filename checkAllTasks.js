@@ -71,11 +71,11 @@ $(() => {
         $('button.close').trigger('click');
         const taskID = $(this).data('task-id').toString();
         const pContainsStringFull = `div.check-all-tasks > div > p:contains(${index})`;
-        const fRMString = `#task-test-correction-${taskID}-correction-modal > div > div > div.modal-body > div.result > ul.correction-request-timeline > li`;
+        const fRMString = `#task-test-correction-${taskID}-correction-modal > div > div > div.modal-body > div.result > div.requirement`;
         waitForAllEls(fRMString, () => {
           const modalChildren = document.querySelectorAll(fRMString);
           modalChildren.forEach((child) => {
-            if (child.className.includes('failed')) failedChecks.push(child);
+            if (child.className.includes('fail')) failedChecks.push(child);
           });
           if (failedChecks.length > 0) $(pContainsStringFull).css('background-color', 'red');
           else $(pContainsStringFull).css('background-color', 'green');
