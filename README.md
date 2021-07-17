@@ -30,3 +30,5 @@
 
 ## Enjoy the CATB!
 - If you find any bugs, please report them so they can be squashed! Otherwise, happy checking!
+
+Original code from [Colson Scott](https://github.com/OctopusHugz). Fixed and improved by [Thibaud Poncin](https://github.com/ThibaudP)
